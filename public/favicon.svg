@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Se Hunde">
+  <rect width="32" height="32" rx="6" fill="#0c1214"/>
+  <path fill="#14343c" d="M3 15h26c-.5 8.4-5.6 13.2-13 13.2S3.5 23.4 3 15z"/>
+  <path fill="none" stroke="#c46a3a" stroke-width="2.2" stroke-linecap="round" d="M6 12.2c6.2-3.2 13.6-3.2 20 0"/>
+  <rect x="3" y="13.2" width="26" height="3.4" rx="1.6" fill="#e7efe8"/>
+</svg>

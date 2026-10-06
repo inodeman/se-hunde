@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0c1214;
+  --color-deep: #10181c;
+  --color-lake: #14343c;
+  --color-foam: #e7efe8;
+  --color-bone: #f4efe6;
+  --color-mist: #8aa0a4;
+  --color-clay: #c46a3a;
+  --color-line: #243034;
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body {
+    background: var(--color-ink);
+    color: var(--color-foam);
+    font-family: var(--font-sans);
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-clay);
+    outline-offset: 2px;
+  }
+}
+
+@keyframes ken-a {
+  from { transform: scale(1.05) translate3d(0, 0, 0); }
+  to { transform: scale(1.16) translate3d(-2%, -1.2%, 0); }
+}
+@keyframes ken-b {
+  from { transform: scale(1.14) translate3d(-1.5%, 0, 0); }
+  to { transform: scale(1.05) translate3d(1.2%, -1%, 0); }
+}
+@keyframes ken-c {
+  from { transform: scale(1.06) translate3d(0, -1%, 0); }
+  to { transform: scale(1.15) translate3d(1.6%, 1%, 0); }
+}
+@keyframes ken-d {
+  from { transform: scale(1.12) translate3d(1%, 1%, 0); }
+  to { transform: scale(1.04) translate3d(-1.4%, -0.6%, 0); }
+}
+
+.ken { animation-duration: 46s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; animation-direction: alternate; animation-play-state: paused; }
+.ken-a { animation-name: ken-a; }
+.ken-b { animation-name: ken-b; }
+.ken-c { animation-name: ken-c; }
+.ken-d { animation-name: ken-d; }
+.ken.is-on { animation-play-state: running; }
+
+.stage-in { animation: stage-in 480ms ease; }
+@keyframes stage-in {
+  from { opacity: 0.35; }
+  to { opacity: 1; }
+}
+
+.scrub {
+  appearance: none;
+  height: 0.35rem;
+  width: 100%;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--color-clay) var(--pct, 0%),
+    var(--color-line) var(--pct, 0%)
+  );
+  cursor: pointer;
+}
+.scrub::-webkit-slider-thumb {
+  appearance: none;
+  height: 0.9rem;
+  width: 0.9rem;
+  border-radius: 999px;
+  background: var(--color-bone);
+  border: 2px solid var(--color-clay);
+}
+.scrub::-moz-range-thumb {
+  height: 0.9rem;
+  width: 0.9rem;
+  border-radius: 999px;
+  background: var(--color-bone);
+  border: 2px solid var(--color-clay);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ken { animation: none; }
+  .stage-in { animation: none; }
+}
