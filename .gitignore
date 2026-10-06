@@ -8,5 +8,6 @@ dist
 *.log
 screenshots
 artifacts
+exports
 .grok
 .tanstack

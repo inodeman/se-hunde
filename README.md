@@ -11,7 +11,13 @@ npm install
 npm run dev
 ```
 
-Abre el reproductor, pulsa play. Trece capítulos, voz en off, planos animados y cuatro clips. La barra marca `10:00`.
+## Video completo
+
+El MP4 para YouTube está en la release, no dentro del código: pesa 266 MB y GitHub no acepta archivos de ese tamaño en el repositorio.
+
+[Se hunde — video completo (1080p)](https://github.com/inodeman/se-hunde/releases/download/youtube-1080p/Se-Hunde-YouTube-1080p.mp4)
+
+1920×1080, 16:9, 24 fps, H.264 + AAC, 10:00, con voz.
 
 ## Por qué este tema
 
